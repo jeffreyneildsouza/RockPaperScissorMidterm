@@ -5,19 +5,19 @@ public class Game {
     private String first_name;
     private String last_name;
     private String user_choice;
-    private String computer_choice;
+    private String android;
     private String winner;
 
     public Game(){
         //require empty constructor
     }
 
-    public Game(String id, String first_name, String last_name, String user_choice, String computer_choice, String winner){
+    public Game(String id, String first_name, String last_name, String user_choice, String android, String winner){
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.user_choice = user_choice;
-        this.computer_choice = computer_choice;
+        this.android = android;
         this.winner = winner;
     }
 
@@ -34,9 +34,9 @@ public class Game {
 
         return last_name;
     }
-    public String getComputer(){
+    public String getAndroid(){
 
-        return computer_choice;
+        return android;
     }
 
     public String getUser(){

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                if(computer_choice == user_choice) {
+                if(computer_choice.equals(user_choice)) {
                     result [0] = first_Name;
                     result [1] = last_name;
                     result [2] = user_choice;
@@ -88,9 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                else if(user_choice == "Rock" && computer_choice == "Scissor") {
-
-                    user_score++;
+                else if(user_choice.equals("Rock") && computer_choice.equals("Scissor")) {
 
                     result [0] = first_Name;
                     result [1] = last_name;
@@ -100,9 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                else if(user_choice == "Rock" && computer_choice == "Paper") {
-
-                    comp_score++;
+                else if(user_choice.equals("Rock") && computer_choice.equals("Paper")) {
 
                     result [0] = first_Name;
                     result [1] = last_name;
@@ -111,9 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     result [4] = "Computer";
 
                 }
-                else if(user_choice == "Scissor" && computer_choice == "Paper") {
-
-                    user_score++;
+                else if(user_choice.equals("Scissor") && computer_choice.equals("Paper")) {
 
                     result [0] = first_Name;
                     result [1] = last_name;
@@ -123,9 +117,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                else if(user_choice == "Scissor" && computer_choice == "Rock") {
+                else if(user_choice.equals("Scissor") && computer_choice.equals("Rock")) {
 
-                    comp_score++;
 
                     result [0] = first_Name;
                     result [1] = last_name;
@@ -135,9 +128,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                else if(user_choice == "Paper" && computer_choice == "Rock") {
+                else if(user_choice.equals("Paper") && computer_choice.equals("Rock")) {
 
-                    user_score++;
 
                     result [0] = first_Name;
                     result [1] = last_name;
@@ -147,9 +139,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                else if(user_choice == "Paper" && computer_choice == "Scissor") {
+                else if(user_choice.equals("Paper")  && computer_choice.equals("Scissor")) {
 
-                    comp_score++;
 
                     result [0] = first_Name;
                     result [1] = last_name;
@@ -161,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     result [0] = "Blank";
-
                     result [1] = "Blank";
                     result [2] = "Blank";
                     result [3] = "Blank";
@@ -185,6 +175,9 @@ public class MainActivity extends AppCompatActivity {
         button_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirstName.setText("");
+                LastName.setText("");
+                computer.setText("");
 
             }
 
