@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
         FirstName = findViewById(R.id.txtFirstName);
         LastName = findViewById(R.id.txtLastName);
 
-        first_Name = FirstName.getText().toString();
-        last_name = LastName.getText().toString();
+
 
         dbGame = FirebaseDatabase.getInstance().getReference("Game");
 
@@ -55,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 user_choice = user.getSelectedItem().toString();
+                first_Name = FirstName.getText().toString();
+                last_name = LastName.getText().toString();
 
                 Random r = new Random();
 
@@ -165,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
                 id = dbGame.push().getKey();
 
-                Game g = new Game(id, result[0], result[1], result[2], result[3], result[4]);
+                Game g = new Game(id, first_Name, last_name, result[2], result[3], result[4]);
 
                 dbGame.child(id).setValue(g);
             }
@@ -178,7 +179,6 @@ public class MainActivity extends AppCompatActivity {
                 FirstName.setText("");
                 LastName.setText("");
                 computer.setText("");
-
             }
 
         });
