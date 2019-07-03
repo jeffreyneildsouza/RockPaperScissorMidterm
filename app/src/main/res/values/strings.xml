@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RockPaperScissorMidterm</string>
+    <string name="Play">Play</string>
+    <string name="Reset">Reset</string>
 </resources>

@@ -78,8 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-
-
                 if(computer_choice.equals(user_choice)) {
                     result [0] = first_Name;
                     result [1] = last_name;
