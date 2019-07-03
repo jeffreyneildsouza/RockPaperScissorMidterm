@@ -179,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 FirstName.setText("");
                 LastName.setText("");
                 computer.setText("");
+
             }
 
         });
